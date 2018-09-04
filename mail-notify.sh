@@ -1,5 +1,7 @@
 #!/bin/bash
 
+# Feed the entire email to this script, it will extract Subject and From.
+
 while IFS= read -r line; do
 	#header="$header$line\n"
 	if [[ x$line = "xSubject:"* ]]; then
@@ -10,6 +12,7 @@ while IFS= read -r line; do
 	fi
 done
 
+# No need to notify me on mail from myself
 case $from in
 	*"Wei Liu"*) exit 0;;
 esac
