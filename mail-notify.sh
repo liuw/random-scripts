@@ -17,6 +17,6 @@ case $from in
 	*"Wei Liu"*) exit 0;;
 esac
 
-DISPLAY=:0 /usr/bin/notify-send "$from $subject"
+DISPLAY=:0 /usr/bin/notify-send -t 10000 "$from $subject"
 
 exit 0
