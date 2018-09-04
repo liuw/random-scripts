@@ -11,3 +11,4 @@ lvl=normal
 if [ $ret -ne 0 ]; then lvl=critical; fi
 
 notify-send -u $lvl "$$" "$cmd"
+exit $ret
